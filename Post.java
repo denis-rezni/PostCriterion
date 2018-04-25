@@ -49,7 +49,7 @@ public class Post {
 	public static boolean isLinear(int results[]) {
 		boolean counter = true;
 		int n = Integer.toBinaryString(results.length).length() - 1;
-		for (int i = 0; i < (int) Math.pow(2, n + 1); i++) {
+		for (int i = 0; i < (1 << n + 1)); i++) {
 			counter = true;
 			a: for (int j = 0; j < results.length; j++) {
 				int trueRes = results[j];
@@ -85,7 +85,7 @@ public class Post {
 		// int n = 2;
 		int n = in.nextInt();
 		int[] results = new int[(1 << n)];
-		 for(int i = 0; i < (int)Math.pow(2, n); i++){
+		 for(int i = 0; i < (1 << n); i++){
 		 results[i] = in.nextInt();
 		 }
 		 System.out.println(isZeroPreserving(results));
@@ -94,7 +94,7 @@ public class Post {
 		 System.out.println(isMonotonous(results));
 		 System.out.println(isLinear(results));
 
-//		for (int i = 0; i < (int) Math.pow(2, (1 << n)); i++) {
+//		for (int i = 0; i < (1 << (1 << n))); i++) {
 //			for (int j = 0; j < (1 << n); j++) {
 //				results[(1 << n) - j - 1] = (i >> j) & 1;
 //			}
